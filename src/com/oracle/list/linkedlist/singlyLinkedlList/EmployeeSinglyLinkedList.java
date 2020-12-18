@@ -1,34 +1,34 @@
-package com.oracle.list.linkedlist;
+package com.oracle.list.linkedlist.singlyLinkedlList;
 
 import com.oracle.Employee;
 
-public class EmployeeLinkedList {
-    private EmployeeNode head;
+public class EmployeeSinglyLinkedList {
+    private EmployeeSinglyNode head;
     private  int size;
 
     // o(1)
     public void addToFront(Employee employee) {
         size++;
-        EmployeeNode node = new EmployeeNode(employee);
+        EmployeeSinglyNode node = new EmployeeSinglyNode(employee);
         node.setNext(head);
         head = node;
     }
 
     // o(1)
-    public EmployeeNode removeFromFront(){
+    public EmployeeSinglyNode removeFromFront(){
         if(isEmpty()){
             return null;
         }
 
         size--;
-        EmployeeNode removedItem = head;
+        EmployeeSinglyNode removedItem = head;
         head = head.getNext();
         removedItem.setNext(null);
         return removedItem;
     }
 
     public void printList(){
-        EmployeeNode current = head;
+        EmployeeSinglyNode current = head;
         System.out.print("HEAD -> ");
         while (current != null){
             System.out.print(current);

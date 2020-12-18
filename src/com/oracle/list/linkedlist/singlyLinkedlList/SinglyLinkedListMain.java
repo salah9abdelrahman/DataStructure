@@ -1,15 +1,15 @@
-package com.oracle.list.linkedlist;
+package com.oracle.list.linkedlist.singlyLinkedlList;
 
 import com.oracle.Employee;
 
-public class LinkedListMain {
+public class SinglyLinkedListMain {
     public static void main(String[] args) {
         Employee salah = new Employee("Salah", "Abdelrahman", 4);
         Employee hussein = new Employee("Hussein", "Abdelrahman", 1);
         Employee lobna = new Employee("Lobna", "Abdelrahman", 3);
         Employee nour = new Employee("Nour", "Abdelrahman", 2);
 
-        EmployeeLinkedList list = new EmployeeLinkedList();
+        EmployeeSinglyLinkedList list = new EmployeeSinglyLinkedList();
         System.out.println(list.isEmpty());
 
         list.addToFront(salah);

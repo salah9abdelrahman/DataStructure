@@ -1,16 +1,14 @@
-package com.oracle.list;
+package com.oracle.list.arrayList;
 
 import com.oracle.Employee;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
-/*
-    Vector is thread safe but arrayList not
- */
-public class MyVector {
+public class MyArrayList {
+
     public static void main(String[] args) {
-        List<Employee> employeeList = new Vector<>();
+        List<Employee> employeeList = new java.util.ArrayList<>();
         employeeList.add(new Employee("Jane", "Jones", 123));
         employeeList.add(new Employee("John", "Doe", 4567));
         employeeList.add(new Employee("Mary", "Smith", 22));

@@ -1,12 +1,12 @@
-package com.oracle.list.linkedlist;
+package com.oracle.list.linkedlist.singlyLinkedlList;
 
 import com.oracle.Employee;
 
-public class EmployeeNode {
+public class EmployeeSinglyNode {
     private Employee current;
-    private EmployeeNode next;
+    private EmployeeSinglyNode next;
 
-    public EmployeeNode(Employee employee) {
+    public EmployeeSinglyNode(Employee employee) {
         this.current = employee;
     }
 
@@ -18,11 +18,11 @@ public class EmployeeNode {
         this.current = current;
     }
 
-    public EmployeeNode getNext() {
+    public EmployeeSinglyNode getNext() {
         return next;
     }
 
-    public void setNext(EmployeeNode next) {
+    public void setNext(EmployeeSinglyNode next) {
         this.next = next;
     }
 
