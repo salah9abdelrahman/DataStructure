@@ -10,18 +10,25 @@ public class SinglyLinkedListMain {
         Employee nour = new Employee("Nour", "Abdelrahman", 2);
 
         EmployeeSinglyLinkedList list = new EmployeeSinglyLinkedList();
-        System.out.println(list.isEmpty());
+//        System.out.println(list.isEmpty());
+//
+//        list.addToFront(salah);
+//        list.addToFront(hussein);
+//        list.addToFront(lobna);
+//        list.addToFront(nour);
+//        System.out.println(list.isEmpty());
+//
+//        System.out.println(list.removeFromFront());
+//        System.out.println(list.getSize());
 
-        list.addToFront(salah);
-        list.addToFront(hussein);
-        list.addToFront(lobna);
-        list.addToFront(nour);
-        System.out.println(list.isEmpty());
-
-        System.out.println(list.removeFromFront());
-        System.out.println(list.getSize());
-
+        list.insertSortedById(nour);
+        list.insertSortedById(hussein);
+        list.insertSortedById(lobna);
+//        list.printList();
+        list.insertSortedById(salah);
         list.printList();
+
+
 
 
     }
