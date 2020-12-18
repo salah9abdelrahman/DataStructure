@@ -9,18 +9,15 @@ public class DoublyLinkedListMain {
         Employee lobna = new Employee("Lobna", "Abdelrahman", 3);
         Employee nour = new Employee("Nour", "Abdelrahman", 2);
         EmployeeDoublyLinkedList list = new EmployeeDoublyLinkedList();
-//
-        list.addToEnd(salah);
-        list.removeFromFront();
-        list.addToEnd(lobna);
-//        System.out.println(list.getHead());
-//        System.out.println(list.getTail());
-//        list.addToFront(nour);
-//        list.addToEnd(lobna);
-//        list.addToFront(hussein);
 
+        list.addToFront(hussein);
+        list.addToFront(lobna);
+        list.addToFront(nour);
 
+//        System.out.println(list.addBefore(salah, hussein));
+        System.out.println(list.addBefore(salah, nour));
+        System.out.println(list.addBefore(salah, new Employee("not", " exist", 32)));
         list.printList();
-//        System.out.println(list.getSize());
+
     }
 }
