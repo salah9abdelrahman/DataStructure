@@ -56,7 +56,7 @@ public class EmployeeSinglyLinkedList {
             EmployeeSinglyNode currentNode = head.getNext();
             while (currentNode != null) {
                 // insert at the end
-                if(currentNode.getNext() == null){
+                if (currentNode.getNext() == null) {
                     currentNode.setNext(newNode);
                     size++;
                     return;
