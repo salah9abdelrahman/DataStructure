@@ -1,23 +1,33 @@
 package com.oracle.list.queue;
 
 import com.oracle.Employee;
-import com.oracle.list.stack.arraystack.ArrayStack;
 
 public class ArrayQueueMain {
     public static void main(String[] args) {
-        ArrayQueue arrayQueue = new ArrayQueue(10);
-        arrayQueue.add(new Employee("Salah", "Abdelrahman", 4));
-        arrayQueue.add(new Employee("Hussein", "Abdelrahman", 1));
-        arrayQueue.add(new Employee("Lobna", "Abdelrahman", 3));
-        arrayQueue.add( new Employee("Nour", "Abdelrahman", 2));
+        Employee salah = new Employee("Salah", "Abdelrahman", 4);
+        Employee hussein = new Employee("Hussein", "Abdelrahman", 1);
+        Employee lobna = new Employee("Lobna", "Abdelrahman", 3);
+        Employee nour = new Employee("Nour", "Abdelrahman", 2);
+        Employee oudi = new Employee("Oudi", "Amr", 5);
 
-        arrayQueue.remove();
-        arrayQueue.remove();
-        arrayQueue.remove();
-        arrayQueue.remove();
-//        System.out.println(arrayQueue.peek());
+        ArrayQueue arrayQueue = new ArrayQueue(5);
 
+        // now with circular implementation, the queue wouldn't resize
+        arrayQueue.add(oudi);
+        arrayQueue.add(salah);
+        arrayQueue.remove();
+        arrayQueue.add(lobna);
+        arrayQueue.remove();
+        arrayQueue.add(nour);
+        arrayQueue.remove();
+        arrayQueue.add(hussein);
+        arrayQueue.remove();
+        arrayQueue.add(oudi);
         arrayQueue.printQueue();
+
+
+
+
 
     }
 }
