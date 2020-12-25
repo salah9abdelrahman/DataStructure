@@ -1,8 +1,7 @@
-package com.oracle.list.queue.arrayqueue;
+package com.oracle.queue.arrayqueue;
 
 import com.oracle.Employee;
 
-import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
