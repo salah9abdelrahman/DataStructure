@@ -1,4 +1,4 @@
-package com.oracle.list.queue;
+package com.oracle.list.queue.arrayqueue;
 
 import com.oracle.Employee;
 

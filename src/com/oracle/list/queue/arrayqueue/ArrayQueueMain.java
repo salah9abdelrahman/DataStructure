@@ -1,6 +1,10 @@
-package com.oracle.list.queue;
+package com.oracle.list.queue.arrayqueue;
 
 import com.oracle.Employee;
+
+import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class ArrayQueueMain {
     public static void main(String[] args) {
@@ -25,6 +29,9 @@ public class ArrayQueueMain {
         arrayQueue.add(oudi);
         arrayQueue.printQueue();
 
+
+        Queue<Employee> employeeQueue = new LinkedList<>();
+        employeeQueue.size();
 
 
 
