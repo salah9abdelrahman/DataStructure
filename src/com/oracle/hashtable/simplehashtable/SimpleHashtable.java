@@ -1,6 +1,11 @@
-package com.oracle.hashtable;
+package com.oracle.hashtable.simplehashtable;
 
 import com.oracle.Employee;
+import com.oracle.hashtable.StoredEmployee;
+
+/*
+Handling collisions by Open Addressing (Linear probing as  probe sequence)
+ */
 
 public class SimpleHashtable {
     private StoredEmployee[] hashtable;

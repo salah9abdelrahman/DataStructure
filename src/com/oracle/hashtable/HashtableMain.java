@@ -1,6 +1,8 @@
 package com.oracle.hashtable;
 
 import com.oracle.Employee;
+import com.oracle.hashtable.chainedhashtable.ChainedHashtable;
+import com.oracle.hashtable.simplehashtable.SimpleHashtable;
 
 public class HashtableMain {
     public static void main(String[] args) {
@@ -11,19 +13,22 @@ public class HashtableMain {
         Employee zain = new Employee("zain", "mhmd", 2);
         Employee oudi = new Employee("Oudi", "Amr", 5);
 
-        SimpleHashtable simpleHashtable = new SimpleHashtable();
-        simpleHashtable.put(salah.getLastName(), salah);
-        simpleHashtable.put(hussein.getLastName(), hussein);
-        simpleHashtable.put(lobna.getLastName(), lobna);
-//        simpleHashtable.put(nour.getLastName(), nour);
-        simpleHashtable.put(oudi.getLastName(), oudi);
-        simpleHashtable.put(zain.getLastName(), zain);
-        simpleHashtable.printHashtable();
-        System.out.println(simpleHashtable.get(salah.getLastName()));
-        System.out.println(simpleHashtable.get(lobna.getLastName()));
-        System.out.println(simpleHashtable.remove(lobna.getLastName()));
-        simpleHashtable.printHashtable();
-        System.out.println( simpleHashtable.get(zain.getLastName()));
+//        SimpleHashtable hashtable = new SimpleHashtable();
+        ChainedHashtable hashtable = new ChainedHashtable();
+        hashtable.put(salah.getLastName(), salah);
+        hashtable.put(hussein.getLastName(), hussein);
+        hashtable.put(lobna.getLastName(), lobna);
+        hashtable.put(oudi.getLastName(), oudi);
+        hashtable.put(zain.getLastName(), zain);
+        hashtable.printHashtable();
+
+        System.out.println(hashtable.get(salah.getLastName()));
+        System.out.println(hashtable.get(lobna.getLastName()));
+        System.out.println(hashtable.remove(lobna.getLastName()));
+
+        hashtable.printHashtable();
+
+        System.out.println( hashtable.get(zain.getLastName()));
 
     }
 }
