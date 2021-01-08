@@ -12,7 +12,7 @@ public class Main {
         heap.insert(52);
         heap.insert(67);
 
-        System.out.println(heap.peek());
+//        System.out.println(heap.peek());
 
         heap.printHeap();
 
@@ -24,10 +24,11 @@ public class Main {
 
         // root
 //        heap.delete(0);
-        heap.deleteRoot();
+//        heap.deleteRoot();
 
-        System.out.println(heap.peek());
+//        System.out.println(heap.peek());
 
+        heap.sort();
         heap.printHeap();
 
     }

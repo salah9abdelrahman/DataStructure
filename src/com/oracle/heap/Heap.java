@@ -1,4 +1,5 @@
 package com.oracle.heap;
+
 /*
 Max Heap implementation
  */
@@ -66,14 +67,14 @@ public class Heap {
         return deletedValue;
     }
 
-    public int deleteRoot(){
+    public int deleteRoot() {
         if (isEmpty()) {
             throw new IndexOutOfBoundsException("Heap is empty");
         }
         int deletedRoot = heap[0];
 
         heap[0] = heap[size - 1];
-        fixHeapBelow(0, size -1);
+        fixHeapBelow(0, size - 1);
         return deletedRoot;
     }
 
@@ -124,6 +125,22 @@ public class Heap {
             throw new IndexOutOfBoundsException("Heap is empty");
         }
         return heap[0];
+    }
+
+    /*
+    1) swap the root with the last element in the heap
+    2) heapify the heap except the last element
+     */
+    // o nlog(n)
+    // if used will be no longer a heap
+    public void sort() {
+        int lastHeapIndex = size - 1;
+        for (int i = 0; i < lastHeapIndex; i++) {
+            int temp = heap[0];
+            heap[0] = heap[lastHeapIndex - i];
+            heap[lastHeapIndex - i] = temp;
+            fixHeapBelow(0, lastHeapIndex - 1 - i);
+        }
     }
 
     public void printHeap() {
