@@ -1,5 +1,7 @@
 package com.oracle.heap;
-
+/*
+Max Heap implementation
+ */
 public class Heap {
     private int[] heap;
     private int size;
